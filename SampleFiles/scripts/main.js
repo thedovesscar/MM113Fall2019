@@ -4,7 +4,12 @@ const StarTrekTweet = {
     text: 'Welcome to the OFFICIAL Star Trek Twitter Page!'
 }
 
-const links = ['https://twitter.com/StarTrek', 'https://twitter.com/StarTrek', 'https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/26/1530003551-star-trek.jpg']
+const StarWarsTweet = {
+    join: 'Join the Dark Side...',
+    dare: 'if you dare.'
+}
+
+const links = ['https://twitter.com/StarTrek', 'https://twitter.com/StarWars', 'https://hips.hearstapps.com/digitalspyuk.cdnds.net/18/26/1530003551-star-trek.jpg']
 
 const modifyText = () => {
     //Change the text of message2 to be the message of the StarTrekTweet object
@@ -14,13 +19,24 @@ const modifyText = () => {
     document.getElementById('message2').innerHTML = StarTrekTweet.text;
     document.querySelector('#link2').innerHTML = StarTrekTweet.name;
     document.getElementById('user2').innerHTML = StarTrekTweet.handle;
+    if (document.getElementById('message1').innerHTML != StarWarsTweet.join + StarWarsTweet.dare) {
+        document.getElementById('message1').innerHTML = StarWarsTweet.join;
+    }
+    //Just for Fun: This condition will keep it from Changing back on each click
 }
 
-const changeLinkAndImageAttributes = () => {
+const changeLinkAndImageAttributes = function () {
     //Set the href attribute for link1 to point to the first element in the links array
     //Sets the href attribute for link2 to point to the second element in the links array
     //Sets the src attribute for the Ohlone image to point to the third element in the links array
     // YOUR CODE BELOW THIS LINE.
+    document.getElementById('link1').setAttribute('href', links[0]);
+    document.getElementById('link1').setAttribute('style', 'color: red;');
+    document.getElementById('link2').setAttribute('href', links[1]);
+    document.querySelector('#link2').setAttribute('style', 'color: green;');
+    document.querySelector('#Ohlone').setAttribute('src', links[2]);
+    document.getElementById('Ohlone').setAttribute('style', 'border: 2px solid orange;');
+    document.getElementById('message1').innerHTML = StarWarsTweet.join + StarWarsTweet.dare;
 }
 
 const changeClassAttribute = () => {
