@@ -39,11 +39,15 @@ const changeLinkAndImageAttributes = function () {
     document.getElementById('message1').innerHTML = StarWarsTweet.join + StarWarsTweet.dare;
 }
 
-const changeClassAttribute = () => {
+function changeClassAttribute() {
     //Update the changeClassAttribute
     //function so that it replaces the “tweet” class with the “tweet-pink” class for the two tweets.
     // change id="tweet1" class="tweet" to id="tweet1" class="tweet-pink"
     // YOUR CODE BELOW THIS LINE
+    let tweets = document.querySelectorAll('.tweet');
+    tweets.forEach(tweet => {
+        tweet.setAttribute('class', 'tweet-pink');
+    })
 
 }
 
