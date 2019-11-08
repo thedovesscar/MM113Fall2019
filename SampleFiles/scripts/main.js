@@ -36,7 +36,6 @@ const changeLinkAndImageAttributes = function () {
     document.querySelector('#link2').setAttribute('style', 'color: green;');
     document.querySelector('#Ohlone').src = links[2];
     document.getElementById('Ohlone').setAttribute('style', 'border: 2px solid orange;');
-    document.getElementById('message1').innerHTML = StarWarsTweet.join + StarWarsTweet.dare;
 }
 
 function changeClassAttribute() {
@@ -59,4 +58,13 @@ const appendElements = () => {
     //id="tweet1"
     // YOUR CODE BELOW THIS LINE
 
+    document.getElementById('message1').innerHTML = StarWarsTweet.join + StarWarsTweet.dare;
+    const newImg = document.createElement('img');
+    newImg.src = 'https://thumbs.dreamstime.com/z/old-guy-computer-4787807.jpg';
+    document.getElementById('tweet1').appendChild(newImg);
+    document.getElementById('tweet1').appendChild(document.createElement('br'));
+    const newLink = document.createElement('a');
+    newLink.href = 'http://www.ohlone.edu';
+    newLink.innerHTML = "Intro to JavaScript";
+    document.getElementById('tweet1').appendChild(newLink);
 }
