@@ -21,7 +21,7 @@ h1 {
 .main,
 .menu,
 h1 {
-    vertical-align: middle;
+    vertical-align: top;
     box-sizing: border-box;
 }
 
